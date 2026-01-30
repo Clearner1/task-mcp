@@ -14,7 +14,14 @@ import { createServer } from 'http';
 import { z } from 'zod';
 import { getTasks, createTask, updateTask, deleteTask, completeTask } from './tools/task.js';
 
-const PORT = process.env.PORT || 3000;
+// 调试日志：环境变量加载情况
+console.log('=== 环境变量调试 ===');
+console.log('工作目录 (cwd):', process.cwd());
+console.log('PORT 环境变量:', process.env.PORT);
+console.log('DIDA_ACCESS_TOKEN:', process.env.DIDA_ACCESS_TOKEN ? '已设置' : '未设置');
+console.log('==================');
+
+const PORT = process.env.PORT || 3010;
 
 const server = new Server(
   {
