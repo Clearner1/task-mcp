@@ -18,7 +18,7 @@ export async function getAllProjects(): Promise<Project[]> {
 }
 
 /**
- * 获取所有任务（遍历所有项目）
+ * 获取所有任务（遍历所有项目 + 收集箱）
  */
 export async function getAllTasks(): Promise<{ tasks: Task[]; projects: Project[] }> {
   const api = getApiClient();
@@ -35,6 +35,42 @@ export async function getAllTasks(): Promise<{ tasks: Task[]; projects: Project[
       projectNameMap.set(p.id, p.name);
       projectMap.set(p.id, p);
     }
+  }
+
+  // 先获取收集箱的任务（收集箱不在项目列表中，需要单独获取）
+  try {
+    const inboxTasks = await api.listTasks('inbox');
+    for (const task of inboxTasks) {
+      // 规范化状态
+      const rawStatus = (task.status ?? 0) as number;
+      const isCompleted = task.isCompleted || rawStatus === 2 || rawStatus === 1;
+      task.isCompleted = isCompleted;
+      task.status = isCompleted ? 2 : 0;
+
+      // 转换日期字段为本地时间
+      if (task.startDate) task.startDate = fromApiDateTime(task.startDate) || undefined;
+      if (task.dueDate) task.dueDate = formatDueDate(task.dueDate) || undefined;
+      if (task.completedTime) task.completedTime = fromApiDateTime(task.completedTime) || undefined;
+      if (task.createdTime) task.createdTime = fromApiDateTime(task.createdTime) || undefined;
+      if (task.modifiedTime) task.modifiedTime = fromApiDateTime(task.modifiedTime) || undefined;
+
+      // 设置收集箱项目名称
+      task.projectName = '收集箱';
+      task.projectId = 'inbox';
+
+      // 处理子任务
+      if (task.items) {
+        for (const item of task.items) {
+          if (item.startDate) item.startDate = fromApiDateTime(item.startDate) || undefined;
+          if (item.completedTime) item.completedTime = fromApiDateTime(item.completedTime) || undefined;
+        }
+      }
+
+      tasks.push(task);
+    }
+    console.log(`[getAllTasks] 收集箱任务数: ${inboxTasks.length}`);
+  } catch (error) {
+    console.error('[getAllTasks] 获取收集箱任务失败:', error);
   }
 
   // 遍历每个项目获取任务

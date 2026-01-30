@@ -542,6 +542,18 @@ Authorization: Bearer {{token}}
 ]
 ```
 
+> ⚠️ **重要提示：收集箱 (Inbox)**
+> 
+> 收集箱是滴答清单的默认项目，但**不会出现在项目列表 API 的返回结果中**。要获取收集箱的任务，需要使用特殊的 projectId `inbox`：
+> 
+> ```http
+> GET /open/v1/project/inbox/data HTTP/1.1
+> Host: api.dida365.com
+> Authorization: Bearer {{token}}
+> ```
+> 
+> 返回的任务中，`projectId` 会是用户唯一的收集箱 ID（如 `inbox1020887618`）。
+
 #### 根据ID获取项目
 `GET /open/v1/project/{projectId}`
 
