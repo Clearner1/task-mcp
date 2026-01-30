@@ -1,0 +1,24 @@
+{"project":{"id":"693294dde4b062be120bfdd2","name":"\uD83D\uDCDA 学习","color":"#4682B4","sortOrder":-614891469
+    2444127232,"viewMode":"kanban","kind":"TASK"},"tasks":[{"id":"6974674debcf7d0000000072","projectId":"693294dde4
+    b062be120bfdd2","sortOrder":-5501317349376,"title":"开始和老师交流关于第一篇论文的第一个审稿人的回信","content"
+    :"预定的是三点钟，结果「等等」\r\n![image](69746e27ebcf7d0000000075/69746e27ebcf7d0000000074.png)\n","desc":"",
+    "startDate":"2026-01-24T06:30:00.000+0000","dueDate":"2026-01-24T06:30:00.000+0000","timeZone":"Asia/Shanghai",
+    "isAllDay":false,"priority":0,"reminders":["TRIGGER:PT0S","TRIGGER:-PT5M"],"status":0,"columnId":"69548487ebcf7
+    d000000008a","etag":"oge0f3n8","kind":"NOTE"},{"id":"69746f97ebcf7d0000000114","projectId":"693294dde4b062be120
+    bfdd2","sortOrder":-5501585784832,"title":"第三个审稿人优先级","content":"C5\r\nC9\r\n---\n2026年1月24日
+    今日已完成\r\n5,7,8,9,10,12,14,15\r\n一共15个\r\n\r\n还剩7个\r\n1 2 3 4 \r\n2026年1月25日 还剩下：\r\n6 11
+    13\r\n\r\n2026年1月25日13:33:48\r\n还剩下13","desc":"","startDate":"2026-01-23T16:00:00.000+0000","dueDate":"20
+    26-01-23T16:00:00.000+0000","timeZone":"Asia/Shanghai","isAllDay":true,"priority":0,"status":0,"columnId":"6974
+    6e3cebcf7d0000000093","etag":"yxhiojtk","kind":"NOTE"},{"id":"6957bf7eebcf7d000000006b","projectId":"693294dde4
+    b062be120bfdd2","sortOrder":-5499706277888,"title":"第一篇论文实验","content":"#
+    关于Baseline的问题\nCOMEM这个方法需要\n结构化数据集：iTunes-Amazon\n脏数据集：\nW-A\nD-A\nD-S\ni-A\napi：sk-Tw1
+    zTSgbpHwgGZG2ZfxQ1dBkWs6FUwSZoOivrLOaie71IcT1\nurl：① 主站路由地址\nhttps://aizex.top\n②
+    国内直连优化路由地址（该地址仅支持 /v1 路由白名单 访问）\nhttps://a1.aizex.me\n不同的客户端需要填写不同的
+    BASE_URL，请尝试以下路由地址\n/ 请优先尝试根域名\n/v1\n/v1/chat/completions\n---\nMatchGPT\n6-shot的配置方式进
+    行实验\n\n---\n智能体模块：\nD:\\BaiduSyncdisk\\00Study\\10Entity_resolution\\matching\\dataset\\feature_data\\
+    Abt-Buy\n\n---\n提示词移到Appendix","desc":"","startDate":"2026-01-01T16:00:00.000+0000","dueDate":"2026-01-01T
+    16:00:00.000+0000","timeZone":"Asia/Shanghai","isAllDay":true,"priority":0,"repeatFlag":"","status":0,"columnId
+    ":"69548487ebcf7d000000008a","etag":"hjlncs4b","kind":"NOTE"}],"columns":[{"id":"69746e3cebcf7d0000000093","pro
+    jectId":"693294dde4b062be120bfdd2","name":"论文2","sortOrder":536870912},{"id":"69548483ebcf7d000000007d","proj
+    ectId":"693294dde4b062be120bfdd2","name":"就业","sortOrder":0},{"id":"69548487ebcf7d000000008a","projectId":"69
+    3294dde4b062be120bfdd2","name":"论文1","sortOrder":268435456}]}
