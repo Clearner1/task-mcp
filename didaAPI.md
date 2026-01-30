@@ -835,6 +835,7 @@ Authorization: Bearer {{token}}
 | `startDate` | 开始日期时间，格式："yyyy-MM-dd'T'HH:mm:ssZ" (例如："2019-11-13T03:00:00+0000") | string (date-time) |
 | `status` | 任务完成状态。值：`0` (普通/未完成), `2` (已完成) | integer (int32) |
 | `timeZone` | 任务时区 (例如："America/Los_Angeles") | string |
+| `kind` | 任务类型。值：`"TEXT"` (任务), `"NOTE"` (笔记) | string |
 
 #### Project (项目)
 

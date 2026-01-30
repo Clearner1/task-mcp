@@ -201,8 +201,8 @@ export async function getTasks(params: GetTasksParams): Promise<Task[]> {
 
   // 过滤任务
   return tasks.filter(task => {
-    // 只获取任务类型 (kind: 'TASK')，排除笔记类型 (kind: 'NOTE')
-    if (task.kind && task.kind !== 'TASK') {
+    // 只获取任务类型 (kind: 'TEXT')，排除笔记类型 (kind: 'NOTE')
+    if (task.kind && task.kind !== 'TEXT') {
       return false;
     }
 
